@@ -12,7 +12,7 @@ const UserBlocked = new Set();
 const moment = require('moment');
 const jimp = require('jimp');
 const Canvas = require('canvas');
-const prefix = '-'
+const prefix = '$'
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setActivity("Broadcast Bot.", {type: 'PLAYING'});
@@ -43,7 +43,7 @@ client.user.setActivity("Broadcast Bot.", {type: 'PLAYING'});
 
 
 client.on('message', message => {
-        var prefix = "-";
+        var prefix = "$";
               if(!message.channel.guild) return;
     if(message.content.startsWith(prefix + 'bc')) {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
